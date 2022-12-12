@@ -27,6 +27,7 @@ function onInputSearch(evt) {
         }
         if (countries.length >= 2) {
           renderCountryList(countries);
+          console.log(countries);
         }
         if (countries.length === 1) {
           renderCountryInfo(countries);
@@ -45,8 +46,8 @@ function deleteRenderMarkUp() {
 
 function renderCountryList(countries) {
   const countriesMarkUp = countries
-    .map(({ flags: { svg }, name: { official } }) => {
-      return `<li><img src="${svg}" width=40><h2>${official}</h2></li>`;
+    .map(({ flags: { svg }, name: { common } }) => {
+      return `<li><img src="${svg}" width=40><h2>${common}</h2></li>`;
     })
     .join('');
   listRef.innerHTML = countriesMarkUp;
