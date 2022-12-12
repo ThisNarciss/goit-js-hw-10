@@ -54,7 +54,7 @@ function renderCountryList(countries) {
 }
 
 function renderCountryInfo(countries) {
-  const countriesMarkUp = countries
+  const countryMarkUp = countries
     .map(
       ({
         flags: { svg },
@@ -71,5 +71,5 @@ function renderCountryInfo(countries) {
       }
     )
     .join('');
-  infoRef.innerHTML = countriesMarkUp;
+  infoRef.innerHTML = countryMarkUp;
 }
