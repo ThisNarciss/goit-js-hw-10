@@ -27,7 +27,6 @@ function onInputSearch(evt) {
         }
         if (countries.length >= 2) {
           renderCountryList(countries);
-          console.log(countries);
         }
         if (countries.length === 1) {
           renderCountryInfo(countries);
