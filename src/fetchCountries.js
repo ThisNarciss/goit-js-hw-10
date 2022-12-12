@@ -1,5 +1,3 @@
-import Notiflix from 'notiflix';
-
 export function fetchCountries(name) {
   if (!name) {
     return;
