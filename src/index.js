@@ -13,7 +13,7 @@ inputRef.addEventListener('input', debounce(onInputSearch, DEBOUNCE_DELAY));
 
 function onInputSearch(evt) {
   const inputVal = evt.target.value.trim();
-  console.log(fetchCountries(inputVal));
+
   fetchCountries(inputVal)
     .then(countries => {
       if (countries.length > 10) {
@@ -23,6 +23,7 @@ function onInputSearch(evt) {
         return;
       }
       if (countries.length >= 2 && countries.length <= 10) {
+        listRef.innerHTML = '';
         renderCountries(countries);
       }
     })
